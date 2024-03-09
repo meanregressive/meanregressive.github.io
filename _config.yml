@@ -46,21 +46,21 @@ additional_links:
 
 # About Section
 # about_title: About Me
-about_profile_image: images/profile.jpg
+about_profile_image: images/githubdp.jpg
 about_content: | # this will include new lines to allow paragraphs
   Hi, my name's Deboleena and this is a work in progress.
-#  I am most skilled in: <mark>AWS</mark> and <mark>Eating Pizza</mark>
+#  I am most skilled in: <mark>Stata</mark> and <mark>enjoying poetry</mark>
 
 content:
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: top-middle
-        title: Super awesome project
-        link: github.com/sproogen
+        title: IMAGES harmonization
+        link: menandgendersurvey.org
         # link_text: Project Website
         additional_links:
-          - title:  sproogen/modern-resume-theme
+          - title:  #UPDATE
             icon: fab fa-github
             url: github.com/sproogen/modern-resume-theme
           # - title:  Github page for project (eg. sproogen/modern-resume-theme)
@@ -75,11 +75,11 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: left
-        title: The Boring Company
-        link: boringcompany.com
-        # link_text: boringcompany.com
-        sub_title: Senior Network System Administrator
-        caption: November 2017 - Present
+        title: IFPRI
+        link: ifpri.org
+        # link_text: IFPRI
+        sub_title: Research Analyst II
+        caption: February 2022 - Present
         quote: >
           Solving 21st century problems by diging holes and making game changing products like the *not a flamethrower*
         description: | # this will include new lines to allow paragraphs
