@@ -1,0 +1,15 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+vendor/
+.bundle/
+*.tmp
+*.log
+*.aux
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+tmpclaude-*

@@ -1,0 +1,103 @@
+- id: W1
+  type: W
+  year: 2025
+  authors: "Allen IV, J.; Karachiwalla, N.; Rakshit, D."
+  title: "Are poor people conditionally cooperative? Contrasting evidence from a field-adapted contributions game."
+  venue: "IFPRI Discussion Paper 2364"
+  url: "https://hdl.handle.net/10568/176850"
+
+- id: W2
+  type: W
+  year: 2025
+  authors: "Leight, J.; Hirvonen, K.; Karachiwalla, N.; Rakshit, D."
+  title: "Displacement and development: Evidence from a graduation program for Somalia's ultra-poor."
+  venue: "IFPRI Discussion Paper 2356"
+  url: "https://hdl.handle.net/10568/176389"
+
+- id: J1
+  type: J
+  year: 2025
+  authors: "Lokot, M.; Sultana, N.; Hidrobo, M.; Ahmed, A.; Hoddinott, J.; Rakshit, D.; Roy, S.; Ranganathan, M."
+  title: "Evolution of intimate partner violence impacts from cash transfers, food transfers, and behaviour change communication: Mixed-method experimental evidence from a nine-year post-programme follow-up in Bangladesh."
+  venue: "Social Science & Medicine, 117901"
+  url: "https://doi.org/10.1016/j.socscimed.2025.117901"
+
+- id: R1
+  type: R
+  year: 2024
+  authors: "Leight, J.; Hirvonen, K.; Karachiwalla, N.; Rakshit, D."
+  title: "Building pathways out of poverty in Baidoa: A randomized controlled trial — Evidence from the midline survey."
+  venue: "Learning Brief, IFPRI"
+  url: "https://hdl.handle.net/10568/140604"
+
+- id: W3
+  type: W
+  year: 2023
+  authors: "Hoddinott, J.; Ahmed, A.; Quisumbing, A.; Rakshit, D."
+  title: "Can gender-sensitive programs improve resilience? Medium-term impacts of an intervention in Bangladesh."
+  venue: "IFPRI Discussion Paper 2231"
+  url: "https://doi.org/10.2499/p15738coll2.137085"
+
+- id: J2
+  type: J
+  year: 2023
+  authors: "Doyle, K.; Levtov, R. G.; Karamage, E.; Rakshit, D.; et al."
+  title: "Long-term impacts of the Bandebereho program on violence against women and children, maternal health-seeking, and couple relations in Rwanda: A six-year follow-up of a randomized controlled trial."
+  venue: "EClinicalMedicine, 64, 102233"
+  url: "https://doi.org/10.1016/j.eclinm.2023.102233"
+
+- id: R2
+  type: R
+  year: 2023
+  authors: "Rakshit, D.; Barker, D.; Gupta, T.; Lauro, G."
+  title: "Step by Step: Navigating Boyhood in sub-Saharan Africa."
+  venue: "Equimundo"
+  url: "https://www.equimundo.org/resources/step-by-step-navigating-boyhood-in-sub-saharan-africa"
+
+- id: R3
+  type: R
+  year: 2022
+  authors: "Greene, M. E.; Heilman, B.; Barker, G.; Rakshit, D.; Gupta, T."
+  title: "The International Men and Gender Equality Survey: A status report on men, women, and gender equality in 15 headlines."
+  venue: "Equimundo"
+  url: "https://www.equimundo.org/resources/men-and-gender-equality-a-global-status-report-in-15-headlines"
+
+- id: R4
+  type: R
+  year: 2021
+  authors: "Doyle, K.; Rakshit, D.; Levtov, R.; et al."
+  title: "Care, Coping, and Connection under Covid-19: Insights on Couple Relationships from a Follow-up to the Bandebereho RCT in Rwanda."
+  venue: "Promundo-US"
+  url: "https://www.equimundo.org/resources/rwanda-covid-study/"
+
+- id: R5
+  type: R
+  year: 2020
+  authors: "Rakshit, D.; Levtov, R."
+  title: "Men, Women, and Gender Relations in Georgia: Public Perceptions and Attitudes."
+  venue: "UNDP and UNFPA Georgia"
+  url: "https://www.undp.org/georgia/publications/men-women-and-gender-relations-georgia-public-perceptions-and-attitudes"
+
+- id: R6
+  type: R
+  year: 2020
+  authors: "Rakshit, D."
+  title: "Putting Fathers' Care to Work: Landscape Report on Working Fathers' Uptake of Parental Leave."
+  venue: "Parental Leave Corporate Task Force, Equimundo"
+  url: "https://www.equimundo.org/resources/putting-fathers-care-to-work-landscape-report-on-working-fathers-uptake-of-parental-leave-2020/"
+
+- id: R7
+  type: R
+  year: 2020
+  authors: "Rakshit, D."
+  title: "Engaging Missing Populations in Gender-Transformative Programs."
+  venue: "Promundo-US and Plan International Canada"
+  url: "https://www.equimundo.org/engaging-men-in-reducing-maternal-newborn-and-child-mortality-lessons-from-bangladesh-ghana-haiti-nigeria-and-senegal/"
+
+- id: R8
+  type: R
+  year: 2020
+  authors: "Rakshit, D."
+  title: "Recruitment and Retention of Male Participants in Gender-Transformative Programs."
+  venue: "Promundo-US and Plan International Canada"
+  url: "https://www.equimundo.org/resources/learning-brief-recruitment-and-retention-of-male-participants-in-gender-transformative-programs/"

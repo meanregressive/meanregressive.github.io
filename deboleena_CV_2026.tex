@@ -1,0 +1,295 @@
+%=====================================================================
+%  DEBOLEENA RAKSHIT — CV
+%=====================================================================
+\documentclass[a4paper,11pt]{article}
+
+% ---------- PACKAGES
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage[left=1.2cm,top=1.2cm,right=1.2cm,bottom=1.2cm]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fontawesome5}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+
+% ---------- COLORS & LINKS ----------
+\definecolor{darkblue}{RGB}{0,0,139}
+\hypersetup{colorlinks=true, linkcolor=darkblue, urlcolor=darkblue, filecolor=darkblue}
+\urlstyle{same}
+
+% ---------- BODY FONT: Palatino-like ----------
+\renewcommand{\familydefault}{ppl}
+
+% ---------- SECTION HEADINGS ----------
+\titleformat{\section}{\scshape\large\raggedright}{}{0em}{}[\color{black}\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+% ---------- CUSTOM COMMANDS ----------
+% Heading font: ~10% larger than the 11pt body, reused by \cvheading
+% (org names) and the publication subsection headings so they match.
+\newcommand{\cvheadfont}{\fontsize{12}{14.5}\selectfont}
+
+% One job entry: {Organisation}{Location}{Role / titles}{Dates}
+% Typeset as a standalone paragraph (NOT a list item), so it sits flush at
+% the text margin, aligned with the section rule. \noindent + @{} on the
+% tabular* outer edges keep both lines flush left; \extracolsep{\fill}
+% pushes the location/dates to the right margin.
+% \\[3pt] = extra gap between the org line and the role/dates line.
+\newcommand{\cvheading}[4]{%
+  \vspace{2mm}\par\noindent
+  \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    {\cvheadfont\textbf{#1}} & \textit{\footnotesize #2} \\[3pt]
+    \textit{\footnotesize #3} & \footnotesize #4 \\
+  \end{tabular*}\par\vspace{-0.4mm}
+}
+
+% Single-line heading in the SAME style as \cvheading's org name (same font,
+% weight, flush-left margin, and leading space). Used for the publication
+% subsection headings so they match the experience headings exactly.
+\newcommand{\cvsubheading}[1]{\vspace{2mm}\par\noindent{\cvheadfont\textbf{#1}}\par}
+
+\newcommand{\substart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.2mm,topsep=0.3mm,nosep,label=\textasteriskcentered]}
+\newcommand{\subend}{\end{itemize}}
+
+% Bulleted detail under a job: {Bold lead}{text}
+\newcommand{\cvitem}[2]{\item \textbf{#1} #2}
+
+% References line for a role: {names / what they speak to}. No bullet; pulled
+% back out of the bullet indent so it sits flush at the text margin, aligned
+% with \cvheading. The \parbox keeps any wrapped lines flush left too.
+\newcommand{\references}[1]{%
+  \item[]\vspace{0.4mm}%
+  \hspace*{-\leftmargin}\parbox[t]{\dimexpr\linewidth+\leftmargin\relax}{%
+    \textit{\footnotesize \textbf{References:} #1}}%
+}
+
+% One-line entry for Presentations / Skills: {Bold label}{text}
+\newcommand{\cvline}[2]{\item \textbf{#1} #2}
+
+% List environments
+% Headings are now standalone paragraphs, so the outer wrapper is a no-op.
+\newcommand{\jobsstart}{}
+\newcommand{\jobsend}{\vspace{1mm}}
+\newcommand{\bulletsstart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.8mm,topsep=1.2mm]}
+\newcommand{\bulletsend}{\end{itemize}\vspace{-1mm}}
+\newcommand{\linesstart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.8mm,topsep=1mm]}
+\newcommand{\linesend}{\end{itemize}}
+
+% Bullet glyphs: solid dot at level 1 (\cvitem, skills). \substart details
+% (now level 2) are pinned to an asterisk in their own definition above.
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\begin{document}
+\pagestyle{empty}
+
+%=====================================================================
+% HEADER
+%=====================================================================
+\begin{center}
+  {\Huge\textbf{Deboleena Rakshit}}\\[2mm]
+  \small
+  \small
+  \raisebox{-0.2em}{\includegraphics[height=1.2em]{media/GitHub_Invertocat_Black_Clearspace.png}}~\href{https://github.com/meanregressive}{meanregressive}\quad|\quad
+  \raisebox{-0.15em}{\includegraphics[height=0.95em]{media/logo-black.png}}~\href{https://twitter.com/meanregressive}{meanregressive}\quad|\quad
+  \faLinkedin~\href{https://www.linkedin.com/in/deboleenarakshit/}{Deboleena Rakshit}\quad|\quad
+  \faGraduationCap~\href{https://scholar.google.com/citations?user=cZbkgvgAAAAJ&hl=en}{Deboleena Rakshit}\\[1.5mm]
+  \small Mexico City and Washington, DC
+\end{center}
+%=====================================================================
+% OBJECTIVE
+%=====================================================================
+\section{Overview}
+\small
+Development researcher with 7 years' experience in conducting rigorous evaluations across sub-Saharan Africa and South Asia, having worked previously on implementing development projects at scale.
+
+
+%=====================================================================
+% PROFESSIONAL EXPERIENCE
+%=====================================================================
+\section{Relevant Experience}
+\jobsstart
+
+\cvheading{International Food Policy Research Institute (IFPRI)}{Washington, DC, USA}
+{Senior Research Analyst I (2026--Present); Research Analyst II (2023--2026)}{2023--Present}
+\bulletsstart
+\cvitem{Mozambique school meals program:}{}
+    \substart
+      \item Led baseline enumerator training in Quelimane, Zambezia province, for a Randomized Controlled Trial (RCT) evaluation of the sustainability of a national school meals program
+      \item Developed questionnaires, programmed Computer-Assisted Personal Interviewing (CAPI) surveys, and supervised data collection, cleaning, and analysis for baseline and midline reports
+    \subend
+
+
+  \cvitem{Literature review on women's empowerment interventions:}{}
+  \substart
+  \item Led literature review and evidence synthesis on the cost effectiveness of agricultural interventions targeting women's economic empowerment, spanning 41 countries and 15 types of programs
+  \subend
+
+  \cvitem{Takaful cash transfer secondary analysis:}{}
+  \substart
+  \item Cleaned and analyzed raw administrative data covering 13 million households in Egypt to estimate heterogeneous impacts of  national cash transfers on ultra-poor households to inform future program design
+  \item Was lead author on report with the key finding on how households headed by women and with a higher presence of members with disabilities were more likely to benefit from the cash transfers
+  \subend
+
+  \cvitem{Evaluation of social protection programs in Bangladesh:}{}
+  \substart
+  \item Led analysis on two RCTs of a national cash transfer program and of a nutrition-sensitive agricultural intervention in Bangladesh, with a focus on women's empowerment in both papers
+  \item Presented results at conferences and donor workshops and co-authored papers on both
+  \subend
+
+  \cvitem{Somalia ultra-poor graduation program:}{}
+  \substart
+  \item Conducted enumerator training (remotely) for midline and endline rounds of an RCT evaluation of an ultra-poor graduation model in Baidoa, Somalia
+  \item Created and maintained dashboard to monitor data quality
+  \item Presented results to donors, implementation partners, and other key stakeholders at learning events in Lusaka, Zambia, and Nairobi, Kenya
+
+  \subend
+
+  \cvitem{Led adoption of agentic AI for research at IFPRI:}{}
+  \substart
+    \item Developed and shared an \href{https://github.com/meanregressive/capi-form-lifecycle}{agent skill} to build and manage CAPI surveys end-to-end
+  \item Led IFPRI-wide training on getting started with agentic AI for research attended by 100+ employees
+  \item Part of IFPRI's Data Governance Management Committee to help draft organization policy on AI use
+  \item Designed and led hands-on training session for a team of 15 research analysts based out of Bangladesh on using Claude Code and agentic AI in their work
+  \subend
+
+ \bulletsend
+
+\cvheading{Equimundo (formerly Promundo-US)}{Washington, DC, USA}
+{Data and Research Officer (2022--2023); Research Officer (2020--2022); Research Associate (2019--2020)}{2019--2023}
+\bulletsstart
+  \cvitem{IMAGES data harmonization:}{}
+  \substart
+  \item Led a 3-year exercise to retroactively harmonize data from the International Men and Gender Equality Survey (IMAGES) from 33 countries, resulting in a cross-country database of 67,000 observations and over 5,000 variables.
+  \item Managed design firm and worked with them on designing and launching the \href{https://www.menandgendersurvey.org/}{IMAGES survey online repository} with an indexed database of survey items, survey design tools, data documentation, and all related published studies citing IMAGES data
+  \item Managed the \$200,000 sub-grant that funded this exercise including budget tracking, vendor management, and regular reporting back to the donor
+  \subend
+  \cvitem{Literature review on boyhood in sub-Saharan Africa (SSA):}{}
+  \substart
+  \item Managed \$150,000 project on a landscape review of research on and programming with adolescent boys (ages 8–13) across SSA
+  \item Commissioned subject matter experts at universities, think tanks, and research institutes based in SSA to contribute as co-authors and reviewers, ensuring that all consultants and vendors were based in SSA and remunerated based on global standard rates
+  \item Designed and led the quantitative analysis, supported the qualitative analysis, led the writing and made all editorial decisions on content, layout, and design
+  \subend
+
+  \cvitem{Training for fieldwork:}{}
+  \substart
+  \item Trained enumerators on survey tools for a post-COVID follow-up phone study in Rwanda
+  \item Trained research partners from Rwanda, Uganda, and Lebanon on monitoring and evaluation (M\&E) frameworks at in-person workshop in Utrecht, Netherlands
+  \item Developed M\&E plans and trained research partners in French for the ``husbands' clubs'' projects across multiple countries in West Africa and for a different school-based program in Paris, France
+  \subend
+
+
+\bulletsend
+
+\cvheading{Stanford University}{Washington, DC, USA}{Research Assistant}{2019}
+\bulletsstart
+  \cvitem{Report on women's financial inclusion in Indonesia:}
+  \substart
+  \item Sourced secondary administrative data, led analysis for, and co-authored a landscape review of women's financial inclusion and empowerment in Indonesia
+  \subend
+\bulletsend
+
+\cvheading{Quest Alliance}{Mumbai, India}{Business Development Coordinator (2016–2017); Program Coordinator (2015–2016)}{2015–2017}
+\bulletsstart
+  \cvitem{Managed implementation of youth employability program:}
+  \substart
+  \item Managed end-to-end implementation of employability projects across Maharashtra, helping Quest’s network grow from 5 to 64 vocational training partners across 14 districts
+  \item Managed a youth skilling project that impacted 10,000 young people across Mumbai, Delhi, and Chennai, and achieved a 40\% post-graduation placement rate
+  \item Led in-person training in Phnom Penh to pilot adaptation of employability curriculum with implementing partners in Cambodia, Laos, and Kenya
+  \subend
+  \cvitem{Built out new organizational functions:}
+  \substart
+  \item Designed and supervised implementation of a new monitoring and evaluation (M\&E) system for a network of over 60 vocational training centers across India, with a focus on impact measurement
+  \item Started and built out the new industry engagement function focused on developing partnerships with large employers to help connect trainee graduates with jobs through apprenticeships
+  \subend
+\bulletsend
+
+\cvheading{Enago Editorial Services}{Mumbai, India}{Senior Quality Analyst}{2014–2015}
+\bulletsstart
+  \cvitem{Managed team of social science-focused editors:}
+  \substart
+  \item Trained and quality-monitored team of 20 editors who worked on editing academic papers written by researchers who were non-native speakers of English
+  \item Developed style guides, training materials, and contributed to developing in-house editing software
+  \subend
+\bulletsend
+
+\jobsend
+
+%=====================================================================
+% EDUCATION
+%=====================================================================
+\section{Education}
+\jobsstart
+  \cvheading{American University}{Washington, DC, USA}
+  {Real Analysis (Graduate); Linear Algebra, Multivariable Calculus (College)} {2025}
+
+\cvheading{School of Advanced International Studies, Johns Hopkins University}{Bologna, Italy,}
+{M.A., Development Economics \,\textbar\; Editor, \textit{SAIS Perspectives Magazine} \,\textbar\; President, Student Government}{\textit{\& Washington, DC, USA}\enspace 2019}
+
+%\cvheading{School of Advanced International Studies, Johns Hopkins University}{Bologna, Italy, \& Washington, DC, USA}
+ % {M.A. Development Economics \,\textbar\; Editor, \textit{SAIS Perspectives Magazine} \,\textbar\; President, Student Government Association}{2019}
+  \cvheading{Jadavpur University}{Kolkata, India}
+  {B.A. (Honors), English Literature \,\textbar\; Co-edited blog tracking global censorship news}{2011}
+\jobsend
+
+%=====================================================================
+% SELECT PUBLICATIONS  (grouped by type)
+%=====================================================================
+
+\hypertarget{publications}{}
+\section{Select Publications}
+\small
+
+\cvsubheading{Peer-reviewed journal articles}
+\begin{enumerate}[leftmargin=1.5em,labelsep=0pt,itemindent=-1.5em,label={},itemsep=0.4mm,topsep=1mm]
+\item Allen IV, J.; Karachiwalla, N.; \textbf{Rakshit, D.} (2026). \href{https://doi.org/10.1080/13504851.2026.2716401}{\textbf{Are low-income households conditionally cooperative? Contrasting evidence from a field-adapted contributions game.}} Applied Economics Letters. Advance online publication.
+  \item Lokot, M.; Sultana, N.; Hidrobo, M.; Ahmed, A.; Hoddinott, J.; \textbf{Rakshit, D.}; Roy, S.; Ranganathan, M. (2025). \href{https://doi.org/10.1016/j.socscimed.2025.117901}{\textbf{Evolution of intimate partner violence impacts from cash transfers, food transfers, and behaviour change communication: Mixed-method experimental evidence from a nine-year post-programme follow-up in Bangladesh.}} Social Science \& Medicine, 117901.
+  \item Doyle, K.; Levtov, R. G.; Karamage, E.; \textbf{Rakshit, D.}; Kazimbaya, S.; Sayinzoga, F.; Sibomana, H.; Ngayaboshya, S.; Rutayisire, F.; Barker, G. (2023). \href{https://doi.org/10.1016/j.eclinm.2023.102233}{\textbf{Long-term impacts of the Bandebereho program on violence against women and children, maternal health-seeking, and couple relations in Rwanda: A six-year follow-up of a randomized controlled trial.}} EClinicalMedicine, 64, 102233.
+\end{enumerate}
+
+\cvsubheading{Working papers}
+\begin{enumerate}[leftmargin=1.5em,labelsep=0pt,itemindent=-1.5em,label={},itemsep=0.4mm,topsep=1mm]
+  \item Leight, J.; Hirvonen, K.; Karachiwalla, N.; \textbf{Rakshit, D.} (2025). \href{https://hdl.handle.net/10568/176389}{\textbf{Displacement and development: Evidence from a graduation program for Somalia's ultra-poor.}} IFPRI Discussion Paper 2356.
+  \item Hoddinott, J.; Ahmed, A.; Quisumbing, A.; \textbf{Rakshit, D.} (2023). \href{https://doi.org/10.2499/p15738coll2.137085}{\textbf{Can gender-sensitive programs improve resilience? Medium-term impacts of an intervention in Bangladesh.}} IFPRI Discussion Paper 2231.
+\end{enumerate}
+
+\cvsubheading{Technical \& policy reports}
+\begin{enumerate}[leftmargin=1.5em,labelsep=0pt,itemindent=-1.5em,label={},itemsep=0.4mm,topsep=1mm]
+  \item Leight, J.; Hirvonen, K.; Karachiwalla, N.; \textbf{Rakshit, D.} (2024). \href{https://hdl.handle.net/10568/140604}{\textbf{Building pathways out of poverty in Baidoa: A randomized controlled trial: Evidence from the midline survey.}} Learning Brief, IFPRI.
+  \item \textbf{Rakshit, D.}; Barker, G.; Gupta, T.; Lauro, G. (2023). \href{https://www.equimundo.org/resources/step-by-step-navigating-boyhood-in-sub-saharan-africa}{\textbf{Step by step: Navigating boyhood in sub-Saharan Africa.}} Equimundo.
+  \item Greene, M. E.; Heilman, B.; Barker, G.; \textbf{Rakshit, D.}; Gupta, T. (2022). \href{https://www.equimundo.org/resources/men-and-gender-equality-a-global-status-report-in-15-headlines}{\textbf{The International Men and Gender Equality Survey: A status report on men, women, and gender equality in 15 headlines.}} Equimundo.
+  \item Doyle, K.; \textbf{Rakshit, D.}; Levtov, R.; Kazimbaya, S.; Karamage, E.; Rutayisire, F.; Ngayaboshya, S.; Sayinzoga, F. (2021). \href{https://www.equimundo.org/resources/rwanda-covid-study/}{\textbf{Care, coping, and connection under Covid-19: Insights on couple relationships from a follow-up to the Bandebereho randomized controlled trial in Rwanda.}} Promundo-US.
+  \item \textbf{Rakshit, D.}; Levtov, R. (2020). \href{https://www.undp.org/georgia/publications/men-women-and-gender-relations-georgia-public-perceptions-and-attitudes}{\textbf{Men, women, and gender relations in Georgia: Public perceptions and attitudes.}} UNDP and UNFPA Georgia.
+  \item \textbf{Rakshit, D.} (2020). \href{https://www.equimundo.org/resources/putting-fathers-care-to-work-landscape-report-on-working-fathers-uptake-of-parental-leave-2020/}{\textbf{Putting fathers' care to work: Landscape report on working fathers' uptake of parental leave.}} Parental Leave Corporate Task Force.
+  \item \textbf{Rakshit, D.} (2020). \href{https://www.equimundo.org/engaging-men-in-reducing-maternal-newborn-and-child-mortality-lessons-from-bangladesh-ghana-haiti-nigeria-and-senegal/}{\textbf{Engaging missing populations in gender-transformative programs.}} Promundo-US and Plan International Canada.
+  \item \textbf{Rakshit, D.} (2020). \href{https://www.equimundo.org/resources/learning-brief-recruitment-and-retention-of-male-participants-in-gender-transformative-programs/}{\textbf{Recruitment and retention of male participants in gender-transformative programs.}} Promundo-US and Plan International Canada.
+  \item \textbf{Rakshit, D.} (2020). \href{https://www.equimundo.org/resources/learning-brief-role-of-facilitation-in-gender-transformative-programs-that-engage-men-and-boys/}{\textbf{Role of facilitation in gender-transformative programs that engage men and boys.}} Promundo-US and Plan International Canada.
+\end{enumerate}
+
+%=====================================================================
+% CONFERENCES
+%=====================================================================
+\section{Conferences}
+\linesstart
+ \cvline{IFPRI RISE Research Day Conference, Washington, DC, 2026:}{Displacement and development: Evidence from a graduation program for Somalia’s ultra-poor.}
+  \cvline{Joint Data Center Research Conference on Forced Displacement, Bangkok, 2026:}{\href{https://www.jointdatacenter.org/news-and-events/4th-research-conference-on-forced-displacement/}{Displacement and development: Evidence from a graduation program for Somalia’s ultra-poor.}}
+  \cvline{IFPRI RISE Research Day Conference, Washington, DC, 2024:}{Long-term impacts of transfers on IPV: Evidence from a 9-year post-program follow-up in Bangladesh.}
+  \cvline{Sexual Violence Research Initiative (SVRI) Conference, Cancún, 2022:}{\href{https://www.svriforum2022.org/conference-programme/}{The impact of the COVID-19 pandemic on couple relationships in Rwanda.}}
+\linesend
+
+%=====================================================================
+% SKILLS
+%=====================================================================
+\section{Skills}
+\linesstart
+  \cvline{Methods:}{Randomized controlled trials, survey design and experiments, administrative data analysis, mixed methods}
+  \cvline{AI and automation:}{Claude Code, Codex; building agent skills for research workflows}
+  \cvline{Data and analysis:}{Stata, Python, QGIS, Tableau, \LaTeX{}, Git}
+  \cvline{Survey platforms:}{SurveyCTO, KoboToolbox}
+  \cvline{Languages:}{Fluent: Bengali, French, Hindi; Basic: Italian, Portuguese, Spanish}
+\linesend
+
+\end{document}

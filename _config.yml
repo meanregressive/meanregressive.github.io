@@ -1,0 +1,62 @@
+title: "Deboleena Rakshit"
+tagline: "Research Analyst | Development Economist"
+description: >-
+  Research Analyst II at IFPRI. I study gender equality,
+  women's economic empowerment, intimate partner violence,
+  and household resilience in sub-Saharan Africa and South Asia.
+url: "https://meanregressive.github.io"
+baseurl: ""
+
+author:
+  name: "Deboleena Rakshit"
+  github: "meanregressive"
+  twitter: "meanregressive"
+  bluesky: "meanregressive.bsky.social"
+  linkedin: "deboleenarakshit"
+
+theme: null
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  hard_wrap: false
+
+paginate: 8
+paginate_path: "/blog/page:num/"
+
+permalink: /blog/:year/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Deboleena Rakshit"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - "*.tex"
+  - "*.log"
+  - vendor/
+  - .bundle/
+  - node_modules/
+  - "C:/Users/**"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+sass:
+  style: compressed
+  sass_dir: _sass

@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<article class="post-article" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%B %-d, %Y" }}
+      </time>
+      {% if page.categories and page.categories.size > 0 %}
+        &ensp;&middot;&ensp;
+        {% for cat in page.categories %}
+          <span class="post-category">{{ cat }}</span>
+        {% endfor %}
+      {% endif %}
+    </p>
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    {% if page.tags and page.tags.size > 0 %}
+      <div class="post-tags">
+        {% for tag in page.tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    {% else %}
+      <span></span>
+    {% endif %}
+    <a href="{{ '/blog/' | relative_url }}" class="back-link">&larr; All essays</a>
+  </footer>
+</article>

@@ -1,0 +1,15 @@
+<li class="pub-entry">
+  <span class="pub-type-badge badge-{{ include.pub.type | downcase }}">{{ include.pub.type }}</span>
+  <div class="pub-body">
+    <span class="pub-authors">{{ include.pub.authors }} ({{ include.pub.year }}).</span>
+    {% if include.pub.url %}
+      <a href="{{ include.pub.url }}" class="pub-title" rel="noopener" target="_blank">{{ include.pub.title }}</a>
+    {% else %}
+      <span class="pub-title">{{ include.pub.title }}</span>
+    {% endif %}
+    <span class="pub-venue">{{ include.pub.venue }}.</span>
+    {% if include.pub.note %}
+      <span class="pub-note">{{ include.pub.note }}</span>
+    {% endif %}
+  </div>
+</li>

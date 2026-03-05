@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    {% include nav.html %}
+
+    <main id="main-content" role="main">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+    <script>
+      // Mobile nav toggle
+      var toggle = document.querySelector('.nav-toggle');
+      var menu = document.querySelector('.nav-links');
+      if (toggle && menu) {
+        toggle.addEventListener('click', function() {
+          var expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !expanded);
+          menu.classList.toggle('is-open');
+        });
+      }
+    </script>
+  </body>
+</html>
