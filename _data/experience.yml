@@ -1,33 +1,89 @@
+# Work experience — single source of truth, transcribed from the LaTeX CV.
+# Bullets are rendered with markdownify, so [text](url) links work.
+
 - org: "International Food Policy Research Institute (IFPRI)"
-  location: "Washington, DC"
-  role: "Research Analyst II"
+  location: "Washington, DC, USA"
   dates: "2023–Present"
-  bullets:
-    - "Evaluate randomized controlled trial impact evaluations in Bangladesh, Somalia, and Mozambique on social protection and livelihoods programs."
-    - "Lead secondary analysis of 13 million administrative records from Egypt's Ministry of Social Solidarity."
-    - "Contribute to a systematic review on cost-effectiveness of agricultural interventions on women's economic empowerment."
-    - "Co-author peer-reviewed articles, IFPRI Discussion Papers, and learning briefs."
+  roles: "Senior Research Analyst I (2026–Present); Research Analyst II (2023–2026)"
+  projects:
+    - name: "Mozambique school meals program"
+      bullets:
+        - "Led baseline enumerator training in Quelimane, Zambezia province, for a Randomized Controlled Trial (RCT) evaluation of the sustainability of a national school meals program"
+        - "Developed questionnaires, programmed Computer-Assisted Personal Interviewing (CAPI) surveys, and supervised data collection, cleaning, and analysis for baseline and midline reports"
+    - name: "Literature review on women's empowerment interventions"
+      bullets:
+        - "Led literature review and evidence synthesis on the cost effectiveness of agricultural interventions targeting women's economic empowerment, spanning 41 countries and 15 types of programs"
+    - name: "Takaful cash transfer secondary analysis"
+      bullets:
+        - "Cleaned and analyzed raw administrative data covering 13 million households in Egypt to estimate heterogeneous impacts of national cash transfers on ultra-poor households to inform future program design"
+        - "Was lead author on report with the key finding on how households headed by women and with a higher presence of members with disabilities were more likely to benefit from the cash transfers"
+    - name: "Evaluation of social protection programs in Bangladesh"
+      bullets:
+        - "Led analysis on two RCTs of a national cash transfer program and of a nutrition-sensitive agricultural intervention in Bangladesh, with a focus on women's empowerment in both papers"
+        - "Presented results at conferences and donor workshops and co-authored papers on both"
+    - name: "Somalia ultra-poor graduation program"
+      bullets:
+        - "Conducted enumerator training (remotely) for midline and endline rounds of an RCT evaluation of an ultra-poor graduation model in Baidoa, Somalia"
+        - "Created and maintained dashboard to monitor data quality"
+        - "Presented results to donors, implementation partners, and other key stakeholders at learning events in Lusaka, Zambia, and Nairobi, Kenya"
+    - name: "Led adoption of agentic AI for research at IFPRI"
+      bullets:
+        - "Developed and shared an [agent skill](https://github.com/meanregressive/capi-form-lifecycle) to build and manage CAPI surveys end-to-end"
+        - "Led IFPRI-wide training on getting started with agentic AI for research attended by 100+ employees"
+        - "Part of IFPRI's Data Governance Management Committee to help draft organization policy on AI use"
+        - "Designed and led hands-on training session for a team of 15 research analysts based out of Bangladesh on using Claude Code and agentic AI in their work"
 
 - org: "Equimundo (formerly Promundo-US)"
-  location: "Washington, DC"
-  role: "Data and Research Officer → Research Officer → Research Associate"
+  location: "Washington, DC, USA"
   dates: "2019–2023"
-  bullets:
-    - "Led harmonization of IMAGES survey data from 33 countries into a cross-country database of 67,000 observations and 5,000+ variables."
-    - "Lead author on landscape reports, learning briefs, and technical reports on masculinities and gender-transformative programming."
-    - "Managed projects with budgets of $125,000–$200,000; supervised consultants and coordinated with donors."
+  roles: "Data and Research Officer (2022–2023); Research Officer (2020–2022); Research Associate (2019–2020)"
+  projects:
+    - name: "IMAGES data harmonization"
+      bullets:
+        - "Led a 3-year exercise to retroactively harmonize data from the International Men and Gender Equality Survey (IMAGES) from 33 countries, resulting in a cross-country database of 67,000 observations and over 5,000 variables"
+        - "Managed design firm and worked with them on designing and launching the [IMAGES survey online repository](https://www.menandgendersurvey.org/) with an indexed database of survey items, survey design tools, data documentation, and all related published studies citing IMAGES data"
+        - "Managed the $200,000 sub-grant that funded this exercise including budget tracking, vendor management, and regular reporting back to the donor"
+    - name: "Literature review on boyhood in sub-Saharan Africa (SSA)"
+      bullets:
+        - "Managed $150,000 project on a landscape review of research on and programming with adolescent boys (ages 8–13) across SSA"
+        - "Commissioned subject matter experts at universities, think tanks, and research institutes based in SSA to contribute as co-authors and reviewers, ensuring that all consultants and vendors were based in SSA and remunerated based on global standard rates"
+        - "Designed and led the quantitative analysis, supported the qualitative analysis, led the writing and made all editorial decisions on content, layout, and design"
+    - name: "Training for fieldwork"
+      bullets:
+        - "Trained enumerators on survey tools for a post-COVID follow-up phone study in Rwanda"
+        - "Trained research partners from Rwanda, Uganda, and Lebanon on monitoring and evaluation (M&E) frameworks at in-person workshop in Utrecht, Netherlands"
+        - "Developed M&E plans and trained research partners in French for the \"husbands' clubs\" projects across multiple countries in West Africa and for a different school-based program in Paris, France"
 
-- org: "Stanford University — Center on Global Equality"
-  location: "Washington, DC"
-  role: "Research Assistant"
+- org: "Stanford University"
+  location: "Washington, DC, USA"
   dates: "2019"
-  bullets:
-    - "Contributed to a landscape report on women's financial inclusion and economic empowerment in Indonesia."
+  roles: "Research Assistant"
+  projects:
+    - name: "Report on women's financial inclusion in Indonesia"
+      bullets:
+        - "Sourced secondary administrative data, led analysis for, and co-authored a landscape review of women's financial inclusion and empowerment in Indonesia"
 
 - org: "Quest Alliance"
   location: "Mumbai, India"
-  role: "Program Coordinator"
   dates: "2015–2017"
-  bullets:
-    - "Designed and supervised M&E systems for 60 partner vocational training institutes across India."
-    - "Built industry engagement function to strengthen linkages between employers and training institutes."
+  roles: "Business Development Coordinator (2016–2017); Program Coordinator (2015–2016)"
+  projects:
+    - name: "Managed implementation of youth employability program"
+      bullets:
+        - "Managed end-to-end implementation of employability projects across Maharashtra, helping Quest's network grow from 5 to 64 vocational training partners across 14 districts"
+        - "Managed a youth skilling project that impacted 10,000 young people across Mumbai, Delhi, and Chennai, and achieved a 40% post-graduation placement rate"
+        - "Led in-person training in Phnom Penh to pilot adaptation of employability curriculum with implementing partners in Cambodia, Laos, and Kenya"
+    - name: "Built out new organizational functions"
+      bullets:
+        - "Designed and supervised implementation of a new monitoring and evaluation (M&E) system for a network of over 60 vocational training centers across India, with a focus on impact measurement"
+        - "Started and built out the new industry engagement function focused on developing partnerships with large employers to help connect trainee graduates with jobs through apprenticeships"
+
+- org: "Enago Editorial Services"
+  location: "Mumbai, India"
+  dates: "2014–2015"
+  roles: "Senior Quality Analyst"
+  projects:
+    - name: "Managed team of social science-focused editors"
+      bullets:
+        - "Trained and quality-monitored team of 20 editors who worked on editing academic papers written by researchers who were non-native speakers of English"
+        - "Developed style guides, training materials, and contributed to developing in-house editing software"

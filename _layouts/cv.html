@@ -1,0 +1,112 @@
+---
+layout: default
+wide: true
+---
+<article class="page cv">
+  <header class="post-header cv-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <a class="cv-pdf" href="{{ page.pdf | relative_url }}" title="Download PDF" aria-label="Download CV as PDF" target="_blank"><i class="fa-solid fa-file-pdf"></i></a>
+  </header>
+
+  <div class="cv-grid">
+    <nav class="cv-toc" aria-label="CV sections">
+      <ul>
+        <li><a href="#general">General Information</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#conferences">Conferences</a></li>
+        <li><a href="#skills">Skills</a></li>
+      </ul>
+    </nav>
+
+    <div class="cv-body">
+      <section class="card" id="general">
+        <h2>General Information</h2>
+        <table class="kv">
+          <tr><th>Full Name</th><td>{{ site.author.name }}</td></tr>
+          <tr><th>Based in</th><td>{{ site.author.location }}</td></tr>
+          <tr><th>Email</th><td><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></td></tr>
+          <tr><th>Overview</th><td>{{ site.description }}</td></tr>
+        </table>
+      </section>
+
+      <section class="card" id="experience">
+        <h2>Experience</h2>
+        <ul class="timeline">
+          {% for job in site.data.experience %}
+            <li>
+              <span class="year-badge">{{ job.dates }}</span>
+              <div class="entry">
+                <div class="entry-title">{{ job.org }}</div>
+                <div class="entry-meta"><i class="fa-solid fa-location-dot"></i> {{ job.location }}</div>
+                <div class="entry-role">{{ job.roles }}</div>
+                {% for p in job.projects %}
+                  <div class="project">{{ p.name }}</div>
+                  <ul class="bullets">
+                    {% for b in p.bullets %}
+                      <li>{{ b | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                    {% endfor %}
+                  </ul>
+                {% endfor %}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      <section class="card" id="education">
+        <h2>Education</h2>
+        <ul class="timeline">
+          {% for e in site.data.cv.education %}
+            <li>
+              <span class="year-badge">{{ e.year }}</span>
+              <div class="entry">
+                <div class="entry-title">{{ e.detail }}</div>
+                <div class="entry-meta"><i class="fa-solid fa-building-columns"></i> {{ e.school }} &middot; {{ e.location }}</div>
+                {% if e.extras %}
+                  <ul class="bullets">
+                    {% for x in e.extras %}<li>{{ x | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}
+                  </ul>
+                {% endif %}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      <section class="card" id="publications">
+        <h2>Publications</h2>
+        <ol class="pub-list compact">
+          {% for pub in site.data.publications %}
+            {% include pub-entry.html pub=pub %}
+          {% endfor %}
+        </ol>
+      </section>
+
+      <section class="card" id="conferences">
+        <h2>Conferences</h2>
+        <ul class="timeline">
+          {% for c in site.data.cv.conferences %}
+            <li>
+              <span class="year-badge">{{ c.year }}</span>
+              <div class="entry">
+                <div class="entry-title">{% if c.url %}<a href="{{ c.url }}" rel="noopener" target="_blank">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}</div>
+                <div class="entry-meta"><i class="fa-solid fa-location-dot"></i> {{ c.event }}, {{ c.place }}</div>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      <section class="card" id="skills">
+        <h2>Skills</h2>
+        <table class="kv">
+          {% for s in site.data.cv.skills %}
+            <tr><th>{{ s.label }}</th><td>{{ s.value }}</td></tr>
+          {% endfor %}
+        </table>
+      </section>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,54 @@
+# Remaining CV sections — transcribed from the LaTeX CV.
+
+education:
+  - school: "American University"
+    location: "Washington, DC, USA"
+    year: "2025"
+    detail: "Real Analysis (Graduate); Linear Algebra, Multivariable Calculus (College)"
+  - school: "School of Advanced International Studies, Johns Hopkins University"
+    location: "Bologna, Italy & Washington, DC, USA"
+    year: "2019"
+    detail: "M.A., Development Economics"
+    extras:
+      - "Editor, *SAIS Perspectives Magazine*"
+      - "President, Student Government"
+  - school: "Jadavpur University"
+    location: "Kolkata, India"
+    year: "2011"
+    detail: "B.A. (Honors), English Literature"
+    extras:
+      - "Co-edited blog tracking global censorship news"
+
+conferences:
+  - year: 2026
+    event: "IFPRI RISE Research Day Conference"
+    place: "Washington, DC"
+    title: "Displacement and development: Evidence from a graduation program for Somalia's ultra-poor"
+  - year: 2026
+    event: "Joint Data Center Research Conference on Forced Displacement"
+    place: "Bangkok"
+    title: "Displacement and development: Evidence from a graduation program for Somalia's ultra-poor"
+    url: "https://www.jointdatacenter.org/news-and-events/4th-research-conference-on-forced-displacement/"
+  - year: 2024
+    event: "IFPRI RISE Research Day Conference"
+    place: "Washington, DC"
+    title: "Long-term impacts of transfers on IPV: Evidence from a 9-year post-program follow-up in Bangladesh"
+  - year: 2022
+    event: "Sexual Violence Research Initiative (SVRI) Conference"
+    place: "Cancún"
+    title: "The impact of the COVID-19 pandemic on couple relationships in Rwanda"
+    url: "https://www.svriforum2022.org/conference-programme/"
+
+skills:
+  - label: "Methods"
+    value: "Randomized controlled trials, survey design and experiments, administrative data analysis, evidence synthesis, cross-country data harmonization, mixed methods"
+  - label: "AI and automation"
+    value: "Claude Code, Codex; building agent skills for research workflows"
+  - label: "Data and analysis"
+    value: "Stata, Python, QGIS, Tableau, LaTeX, Git"
+  - label: "Survey platforms"
+    value: "SurveyCTO, KoboToolbox"
+  - label: "Writing and editing"
+    value: "Substantive and line editing, style guides"
+  - label: "Languages"
+    value: "Fluent: Bengali, French, Hindi; Basic: Spanish, Italian, Portuguese"

@@ -1,15 +1,20 @@
-<li class="pub-entry">
-  <span class="pub-type-badge badge-{{ include.pub.type | downcase }}">{{ include.pub.type }}</span>
+{%- assign pub = include.pub -%}
+<li class="pub">
+  <div class="pub-badge"><abbr>{{ pub.abbr }}</abbr></div>
   <div class="pub-body">
-    <span class="pub-authors">{{ include.pub.authors }} ({{ include.pub.year }}).</span>
-    {% if include.pub.url %}
-      <a href="{{ include.pub.url }}" class="pub-title" rel="noopener" target="_blank">{{ include.pub.title }}</a>
-    {% else %}
-      <span class="pub-title">{{ include.pub.title }}</span>
-    {% endif %}
-    <span class="pub-venue">{{ include.pub.venue }}.</span>
-    {% if include.pub.note %}
-      <span class="pub-note">{{ include.pub.note }}</span>
+    <div class="pub-title">{{ pub.title }}</div>
+    <div class="pub-authors">
+      {%- for a in pub.authors -%}
+        {%- if forloop.last and forloop.length > 1 %}and {% endif -%}
+        {%- if a == "D. Rakshit" -%}<em class="me">{{ a }}</em>{%- else -%}{{ a }}{%- endif -%}
+        {%- unless forloop.last -%}{%- if forloop.length > 2 -%}, {% else %} {% endif -%}{%- endunless -%}
+      {%- endfor -%}
+    </div>
+    <div class="pub-venue"><em>{{ pub.venue }}</em>, {{ pub.year }}{% if pub.note %}. {{ pub.note }}{% endif %}</div>
+    {% if pub.url %}
+      <div class="pub-links">
+        <a class="btn-sm" href="{{ pub.url }}" rel="noopener" target="_blank">{% if pub.url contains "doi.org" %}DOI{% else %}HTML{% endif %}</a>
+      </div>
     {% endif %}
   </div>
 </li>

@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<article class="about">
+  <header class="post-header">
+    <h1 class="post-title"><b>{{ site.author.first_name }}</b> {{ site.author.last_name }}</h1>
+    <p class="desc">{{ page.subtitle }}</p>
+  </header>
+
+  {%- comment -%} Drop a square photo at assets/img/prof_pic.jpg and it replaces the monogram. {%- endcomment -%}
+  {% assign pic = site.static_files | where: "path", "/assets/img/prof_pic.jpg" | first %}
+  <div class="profile">
+    {% if pic %}
+      <img src="{{ '/assets/img/prof_pic.jpg' | relative_url }}" alt="Photo of {{ site.author.name }}" width="180" height="180">
+    {% else %}
+      <div class="monogram" aria-hidden="true">{{ site.author.first_name | slice: 0 }}{{ site.author.last_name | slice: 0 }}</div>
+    {% endif %}
+  </div>
+
+  <div class="clearfix">
+    {{ content }}
+  </div>
+
+  {% if site.data.news.size > 0 %}
+    <h2 class="section-heading"><a href="{{ '/cv/' | relative_url }}">updates</a></h2>
+    <table class="news">
+      {% for item in site.data.news limit: 6 %}
+        <tr>
+          <th scope="row">{{ item.date }}</th>
+          <td>{{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% endif %}
+
+  <h2 class="section-heading"><a href="{{ '/research/' | relative_url }}">selected publications</a></h2>
+  <ol class="pub-list">
+    {% assign selected = site.data.publications | where: "type", "journal" %}
+    {% for pub in selected %}
+      {% include pub-entry.html pub=pub %}
+    {% endfor %}
+  </ol>
+
+  {% include social-links.html %}
+</article>

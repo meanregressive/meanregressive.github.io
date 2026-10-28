@@ -1,47 +1,40 @@
+// Design tokens. Light is the default; dark applies when the visitor's OS
+// prefers it (unless they picked light with the toggle) or when they pick it.
+
 :root {
-  /* Colors */
-  --color-bg:          #faf9f7;
-  --color-surface:     #f2f0ec;
-  --color-border:      #ddd9d2;
-  --color-text:        #1a1916;
-  --color-text-muted:  #6b6760;
-  --color-accent:      #2c4a6e;
-  --color-accent-alt:  #3a6295;
-  --color-link:        #2c4a6e;
-  --color-link-hover:  #1a2e45;
+  --bg:          #ffffff;
+  --bg-card:     #ffffff;
+  --bg-footer:   #f7f7f7;
+  --text:        #000000;
+  --text-muted:  #6c757d;
+  --border:      #dee2e6;
+  --accent:      #2698ba;
+  --accent-ink:  #ffffff;
+  --hover:       #f1f5f7;
 
-  --color-badge-w:     #3d5a80;
-  --color-badge-j:     #5a7a4a;
-  --color-badge-r:     #7a5a3a;
+  --font: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --container: 800px;
+  --container-wide: 1000px;
+  --nav-h: 57px;
+  --footer-h: 36px;
 
-  /* Typography */
-  --font-serif:        'EB Garamond', 'Palatino Linotype', Palatino, Georgia, serif;
-  --font-sans:         'Inter', 'Helvetica Neue', Arial, sans-serif;
-  --font-mono:         'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
-
-  --font-size-base:    1.125rem;
-  --font-size-sm:      0.875rem;
-  --font-size-lg:      1.25rem;
-  --font-size-xl:      1.5rem;
-  --font-size-2xl:     2rem;
-  --font-size-3xl:     2.75rem;
-
-  --line-height-body:  1.75;
-  --line-height-tight: 1.3;
-
-  /* Spacing (8px base) */
-  --space-1:   0.25rem;
-  --space-2:   0.5rem;
-  --space-3:   0.75rem;
-  --space-4:   1rem;
-  --space-6:   1.5rem;
-  --space-8:   2rem;
-  --space-12:  3rem;
-  --space-16:  4rem;
-  --space-24:  6rem;
-
-  /* Layout */
-  --container-max:  720px;
-  --container-wide: 960px;
-  --border-radius:  3px;
+  color-scheme: light;
 }
+
+@mixin dark-tokens {
+  --bg:          #1c1c1d;
+  --bg-card:     #232325;
+  --bg-footer:   #121213;
+  --text:        #e8e8e8;
+  --text-muted:  #a0a0a5;
+  --border:      #3a3a3d;
+  --accent:      #2fb0d6;
+  --accent-ink:  #121213;
+  --hover:       #2a2a2d;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { @include dark-tokens; }
+}
+:root[data-theme="dark"] { @include dark-tokens; }

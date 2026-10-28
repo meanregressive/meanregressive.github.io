@@ -1,0 +1,51 @@
+.pub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pub {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  padding: .9rem 0;
+
+  & + & { border-top: 1px dashed var(--border); }
+}
+
+.pub-badge abbr {
+  display: block;
+  text-align: center;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-size: .72rem;
+  font-weight: 500;
+  padding: .3rem .25rem;
+  border-radius: 2px;
+  text-decoration: none;
+  margin-top: .15rem;
+}
+
+.pub-title { font-weight: 700; line-height: 1.35; }
+.pub-authors { font-size: .95rem; margin-top: .15rem; }
+.pub-authors .me { font-style: normal; font-weight: 500; text-decoration: underline; text-underline-offset: 2px; }
+.pub-venue { font-size: .95rem; color: var(--text-muted); }
+.pub-links { margin-top: .4rem; display: flex; gap: .4rem; }
+
+.pub-list.compact .pub { grid-template-columns: 96px 1fr; padding: .6rem 0; }
+.pub-list.compact .pub-title { font-weight: 500; }
+
+// Presentations and AI/coding entries reuse the same two-column row
+.talk {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  padding: .75rem 0;
+  & + & { border-top: 1px dashed var(--border); }
+  .pub-badge abbr { background: transparent; color: var(--text-muted); border: 1px solid var(--border); }
+}
+
+@media (max-width: 576px) {
+  .pub, .talk, .pub-list.compact .pub { grid-template-columns: 1fr; gap: .35rem; }
+  .pub-badge abbr { display: inline-block; padding: .2rem .6rem; }
+}

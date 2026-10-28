@@ -3,9 +3,8 @@
   {% include head.html %}
   <body>
     {% include header.html %}
-    {% include nav.html %}
 
-    <main id="main-content" role="main">
+    <main id="main-content" class="container{% if layout.wide %} wide{% endif %}" role="main">
       {{ content }}
     </main>
 
@@ -16,10 +15,23 @@
       var toggle = document.querySelector('.nav-toggle');
       var menu = document.querySelector('.nav-links');
       if (toggle && menu) {
-        toggle.addEventListener('click', function() {
+        toggle.addEventListener('click', function () {
           var expanded = this.getAttribute('aria-expanded') === 'true';
           this.setAttribute('aria-expanded', !expanded);
           menu.classList.toggle('is-open');
+        });
+      }
+
+      // Light/dark toggle: flips whichever theme is showing and remembers the choice
+      var themeBtn = document.querySelector('.theme-toggle');
+      if (themeBtn) {
+        themeBtn.addEventListener('click', function () {
+          var root = document.documentElement;
+          var current = root.getAttribute('data-theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          var next = current === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) {}
         });
       }
     </script>

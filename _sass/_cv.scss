@@ -1,0 +1,97 @@
+// The CV page runs wider than the reading column so the sidebar fits
+.container.wide { max-width: var(--container-wide); }
+
+.cv-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.cv-pdf {
+  font-size: 2rem;
+  color: var(--accent);
+  &:hover { opacity: .8; text-decoration: none; }
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.cv-toc {
+  position: sticky;
+  top: calc(var(--nav-h) + 1.5rem);
+  ul { list-style: none; margin: 0; padding: 0; }
+  a {
+    display: block;
+    padding: .3rem .5rem;
+    border-left: 2px solid transparent;
+    color: var(--text);
+    font-size: .85rem;
+    font-weight: 500;
+    &:hover { color: var(--accent); border-left-color: var(--accent); text-decoration: none; }
+  }
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  h2 { font-size: 1.6rem; margin-bottom: 1rem; }
+}
+
+table.kv {
+  width: 100%;
+  border-collapse: collapse;
+  th, td { padding: .4rem 0; vertical-align: top; text-align: left; }
+  th { width: 30%; padding-right: 1rem; font-weight: 500; color: var(--text-muted); }
+}
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  > li {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 1rem;
+    padding: .75rem 0;
+  }
+  > li + li { border-top: 1px solid var(--border); }
+}
+
+.year-badge {
+  display: block;
+  text-align: center;
+  font-size: .75rem;
+  font-weight: 500;
+  padding: .25rem .3rem;
+  border-radius: 2px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  align-self: start;
+  margin-top: .15rem;
+}
+
+.entry-title { font-weight: 700; }
+.entry-meta { font-size: .85rem; color: var(--text-muted); margin-top: .1rem; i { width: 1em; } }
+.entry-role { font-style: italic; font-size: .92rem; margin-top: .2rem; }
+.project { font-weight: 500; margin-top: .8rem; }
+.bullets {
+  margin: .25rem 0 0;
+  padding-left: 1.1rem;
+  font-size: .93rem;
+  li { margin-bottom: .2rem; }
+}
+
+@media (max-width: 767px) {
+  .cv-grid { grid-template-columns: 1fr; }
+  .cv-toc { display: none; }
+  .card { padding: 1rem; }
+  .timeline > li { grid-template-columns: 1fr; gap: .35rem; }
+  .year-badge { justify-self: start; padding-inline: .6rem; }
+  table.kv th { width: 38%; }
+}

@@ -1,59 +1,110 @@
 *, *::before, *::after { box-sizing: border-box; }
 
-html {
-  font-size: 100%;
-  scroll-behavior: smooth;
-}
+html { scroll-padding-top: calc(var(--nav-h) + 1rem); }
 
 body {
-  font-family: var(--font-serif);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-body);
-  color: var(--color-text);
-  background-color: var(--color-bg);
-  -webkit-font-smoothing: antialiased;
   margin: 0;
-  padding: 0;
+  padding-top: var(--nav-h);
+  padding-bottom: calc(var(--footer-h) + 2rem);
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color .2s ease, color .2s ease;
 }
 
 .container {
-  max-width: var(--container-max);
+  max-width: var(--container);
   margin-inline: auto;
-  padding-inline: var(--space-6);
+  padding-inline: 16px;
 }
 
-.container--wide {
-  max-width: var(--container-wide);
-  margin-inline: auto;
-  padding-inline: var(--space-6);
+a {
+  color: var(--accent);
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
 }
 
-hr {
-  border: none;
-  border-top: 1px solid var(--color-border);
-  margin-block: var(--space-8);
-}
-
+b, strong { font-weight: 700; }
+p { margin: 0 0 1rem; }
+h1, h2, h3, h4 { font-weight: 300; line-height: 1.2; margin: 0 0 .5rem; }
+h3 { font-size: 1.35rem; font-weight: 400; }
 img { max-width: 100%; height: auto; }
+hr { border: 0; border-top: 1px solid var(--border); margin: 2rem 0; }
+.clearfix::after { content: ""; display: table; clear: both; }
 
-code, pre {
-  font-family: var(--font-mono);
-  font-size: 0.85em;
-  background-color: var(--color-surface);
-  border-radius: var(--border-radius);
+// Page header shared by every layout: big light title, muted description
+.post-header {
+  padding-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.post-title {
+  font-size: 2.6rem;
+  font-weight: 300;
+  margin-bottom: .25rem;
+}
+.desc {
+  color: var(--text);
+  font-size: .95rem;
+  margin: 0;
 }
 
-pre {
-  padding: var(--space-4);
-  overflow-x: auto;
+// Section heading, al-folio style: lowercase, light weight
+.section-heading {
+  font-size: 1.85rem;
+  margin: 2.5rem 0 1rem;
+  a { color: var(--text); }
+  a:hover { color: var(--accent); text-decoration: none; }
 }
 
-code { padding: 0.15em 0.35em; }
-
-ul, ol {
-  padding-left: var(--space-6);
+// Right-aligned group heading with a rule, as on al-folio's publications page
+.group-heading {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  opacity: .55;
+  text-align: right;
+  border-bottom: 1px solid var(--border);
+  margin: 2.5rem 0 1.25rem;
+  padding-bottom: .1rem;
 }
 
-li {
-  margin-bottom: var(--space-2);
+.btn-sm {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  padding: .1rem .55rem;
+  border: 1px solid var(--text);
+  border-radius: 3px;
+  color: var(--text);
+  &:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    text-decoration: none;
+  }
+}
+
+.site-footer {
+  position: fixed;
+  inset: auto 0 0 0;
+  height: var(--footer-h);
+  display: flex;
+  align-items: center;
+  background: var(--bg-footer);
+  border-top: 1px solid var(--border);
+  font-size: .75rem;
+  color: var(--text-muted);
+  z-index: 10;
+  .container { width: 100%; }
+}
+
+@media (max-width: 576px) {
+  .post-title { font-size: 2.1rem; }
+  .site-footer { position: static; height: auto; padding: .6rem 0; }
+  body { padding-bottom: 0; }
 }
