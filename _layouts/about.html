@@ -7,11 +7,11 @@ layout: default
     <p class="desc">{{ page.subtitle }}</p>
   </header>
 
-  {%- comment -%} Drop a square photo at assets/img/prof_pic.jpg and it replaces the monogram. {%- endcomment -%}
-  {% assign pic = site.static_files | where: "path", "/assets/img/prof_pic.jpg" | first %}
+  {%- comment -%} A photo at assets/img/prof_pic.jpeg replaces the monogram. {%- endcomment -%}
+  {% assign pic = site.static_files | where: "path", "/assets/img/prof_pic.jpeg" | first %}
   <div class="profile">
     {% if pic %}
-      <img src="{{ '/assets/img/prof_pic.jpg' | relative_url }}" alt="Photo of {{ site.author.name }}" width="180" height="180">
+      <img src="{{ '/assets/img/prof_pic.jpeg' | relative_url }}" alt="Photo of {{ site.author.name }}" width="180" height="180">
     {% else %}
       <div class="monogram" aria-hidden="true">{{ site.author.first_name | slice: 0 }}{{ site.author.last_name | slice: 0 }}</div>
     {% endif %}
