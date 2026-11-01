@@ -3,7 +3,7 @@ layout: page
 title: "research"
 permalink: /research/
 description: "Peer-reviewed articles, working papers, policy reports, and conference presentations by Deboleena Rakshit."
-subtitle: "Peer-reviewed articles, working papers, technical and policy reports, and conference presentations."
+subtitle: "Peer-reviewed articles, working papers, technical and policy reports, conference presentations, and peer review."
 ---
 
 <h2 class="group-heading">peer-reviewed articles</h2>
@@ -36,4 +36,15 @@ subtitle: "Peer-reviewed articles, working papers, technical and policy reports,
     </div>
   </div>
 {% endfor %}
+</div>
+
+<h2 class="group-heading">peer review</h2>
+<div>
+{% for r in site.data.cv.peer_review %}
+  <div class="talk">
+    <div class="pub-badge"><abbr>{{ r.years }}</abbr></div>
+    <div><div class="pub-title">{{ r.journal }}</div></div>
+  </div>
+{% endfor %}
+  <p class="pub-venue">Full record on <a href="https://orcid.org/{{ site.author.orcid }}" rel="noopener" target="_blank">ORCID</a>.</p>
 </div>

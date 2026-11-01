@@ -45,7 +45,7 @@ subtitle: "Agentic AI for research, open-source tools, and the stack I work with
 
 <table class="kv">
   {% for s in site.data.cv.skills %}
-    {% if s.label != "Languages" and s.label != "Writing and editing" %}
+    {% if s.label != "Languages" %}
       <tr><th>{{ s.label }}</th><td>{{ s.value }}</td></tr>
     {% endif %}
   {% endfor %}

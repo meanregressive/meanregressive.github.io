@@ -16,6 +16,7 @@ wide: true
         <li><a href="#education">Education</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#conferences">Conferences</a></li>
+        <li><a href="#peer-review">Peer Review</a></li>
         <li><a href="#skills">Skills</a></li>
       </ul>
     </nav>
@@ -26,7 +27,6 @@ wide: true
         <table class="kv">
           <tr><th>Full Name</th><td>{{ site.author.name }}</td></tr>
           <tr><th>Based in</th><td>{{ site.author.location }}</td></tr>
-          <tr><th>Email</th><td><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></td></tr>
           <tr><th>Overview</th><td>{{ site.description }}</td></tr>
         </table>
       </section>
@@ -97,6 +97,21 @@ wide: true
             </li>
           {% endfor %}
         </ul>
+      </section>
+
+      <section class="card" id="peer-review">
+        <h2>Peer Review</h2>
+        <ul class="timeline">
+          {% for r in site.data.cv.peer_review %}
+            <li>
+              <span class="year-badge">{{ r.years }}</span>
+              <div class="entry">
+                <div class="entry-title">{{ r.journal }}</div>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+        <p class="entry-meta">Full record on <a href="https://orcid.org/{{ site.author.orcid }}" rel="noopener" target="_blank">ORCID</a>.</p>
       </section>
 
       <section class="card" id="skills">

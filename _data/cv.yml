@@ -39,16 +39,23 @@ conferences:
     title: "The impact of the COVID-19 pandemic on couple relationships in Rwanda"
     url: "https://www.svriforum2022.org/conference-programme/"
 
+# Journals reviewed for, from the ORCID public record.
+peer_review:
+  - journal: "Social Science & Medicine"
+    years: "2026"
+  - journal: "BMC Public Health"
+    years: "2024–2025"
+  - journal: "PLOS One"
+    years: "2024"
+
 skills:
   - label: "Methods"
-    value: "Randomized controlled trials, survey design and experiments, administrative data analysis, evidence synthesis, cross-country data harmonization, mixed methods"
+    value: "Randomized controlled trials, survey design and experiments, administrative data analysis, mixed methods"
   - label: "AI and automation"
     value: "Claude Code, Codex; building agent skills for research workflows"
   - label: "Data and analysis"
     value: "Stata, Python, QGIS, Tableau, LaTeX, Git"
   - label: "Survey platforms"
     value: "SurveyCTO, KoboToolbox"
-  - label: "Writing and editing"
-    value: "Substantive and line editing, style guides"
   - label: "Languages"
-    value: "Fluent: Bengali, French, Hindi; Basic: Spanish, Italian, Portuguese"
+    value: "Fluent: Bengali, French, Hindi; Basic: Italian, Portuguese, Spanish"

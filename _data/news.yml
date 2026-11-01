@@ -1,15 +1,7 @@
 # "Updates" table on the home page, newest first. Text is markdown.
-# `date` is free text — use "Mar 2026" or "2026" as precision allows.
+# `date` is free text — use "September 2026" or "2026" as precision allows.
 
-- date: "2026"
-  text: "Promoted to Senior Research Analyst I at [IFPRI](https://www.ifpri.org)."
-- date: "2026"
-  text: "New paper with J. Allen IV and N. Karachiwalla in *Applied Economics Letters*: [Are low-income households conditionally cooperative?](https://doi.org/10.1080/13504851.2026.2716401)"
-- date: "2026"
-  text: "Presented *Displacement and development* (Somalia graduation program) at the [Joint Data Center Research Conference on Forced Displacement](https://www.jointdatacenter.org/news-and-events/4th-research-conference-on-forced-displacement/) in Bangkok and at IFPRI's RISE Research Day."
-- date: "2025"
-  text: "New IFPRI Discussion Paper: [Displacement and development: Evidence from a graduation program for Somalia's ultra-poor](https://hdl.handle.net/10568/176389)."
-- date: "2025"
-  text: "Our nine-year follow-up on IPV impacts of cash and food transfers in Bangladesh is out in [*Social Science & Medicine*](https://doi.org/10.1016/j.socscimed.2025.117901)."
-- date: "2024"
-  text: "Presented long-term impacts of transfers on IPV in Bangladesh at IFPRI's RISE Research Day."
+- date: "September 2026"
+  text: "Check out this new [agent skill](https://github.com/meanregressive/capi-form-lifecycle) I developed for end-to-end CAPI form programming. Feedback very welcome!"
+- date: "June 2026"
+  text: "Back in beautiful Bangkok to present our paper on the evaluation of an ultra-poor graduation program in Somalia at the [4th annual Joint Data Center Research Conference on Forced Displacement](https://www.jointdatacenter.org/news-and-events/4th-research-conference-on-forced-displacement/)."
