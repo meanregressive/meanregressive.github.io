@@ -1,2 +1,2 @@
 # meanregressive.github.io
-[WIP] - Personal website
+Personal website. Work in progress. :)
